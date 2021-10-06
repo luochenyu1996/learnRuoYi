@@ -17,13 +17,11 @@
 
 
     <dependencies>
-
         <!--web场景-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
 
         <!-- 阿里数据库连接池 -->
         <dependency>
@@ -31,14 +29,30 @@
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
-
         <!-- 系统模块-->
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>system</artifactId>
         </dependency>
 
+        <!--验证码相关-->
+        <dependency>
+            <groupId>com.github.penggle</groupId>
+            <artifactId>kaptcha</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>javax.servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
+
+        <!-- SpringBoot 拦截器   aop 相关-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
 
     </dependencies>
 
